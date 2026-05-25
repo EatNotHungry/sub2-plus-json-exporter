@@ -55,7 +55,7 @@
       seen.add(key);
       names.push(name);
     }
-    return names.length ? names : ['codex'];
+    return names.length ? names : ['condex'];
   }
 
   function buildAccountReport(session = {}, options = {}) {
@@ -93,7 +93,7 @@
       chatgpt_account_id: accountId,
       chatgpt_user_id: userId,
       session_expires_at: expiresAt,
-      group_names: normalizeGroupNames(options.groupNames || 'codex'),
+      group_names: normalizeGroupNames(options.groupNames || 'condex'),
       checked_at: normalizeTimestamp(options.now || new Date()),
     });
   }

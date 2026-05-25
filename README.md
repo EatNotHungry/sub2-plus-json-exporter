@@ -150,7 +150,7 @@ plus-status-batch-3.json
       "chatgpt_account_id": "account-id",
       "chatgpt_user_id": "user-id",
       "session_expires_at": "2026-05-25T01:00:00.000Z",
-      "group_names": ["codex"],
+      "group_names": ["condex"],
       "checked_at": "2026-05-25T00:00:00.000Z"
     }
   ]

@@ -109,7 +109,7 @@
     const state = stored?.[STORAGE_KEY] || {};
     elements.accountsInput.value = state.accountsText || '';
     if (state.settings) {
-      elements.groupNamesInput.value = state.settings.groupNames || 'codex';
+      elements.groupNamesInput.value = state.settings.groupNames || 'condex';
     }
     queue = Array.isArray(state.queue) ? state.queue : [];
     queueIndex = Math.max(0, Number(state.queueIndex) || 0);

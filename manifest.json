@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Plus Status Reporter",
+  "version": "0.1.0",
+  "description": "Detect the current ChatGPT Plus status and export a local JSON report without credentials.",
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://*.chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://*.openai.com/*"
+  ],
+  "action": {
+    "default_title": "ChatGPT Plus Status",
+    "default_popup": "popup/popup.html"
+  }
+}

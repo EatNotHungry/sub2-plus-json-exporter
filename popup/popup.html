@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatGPT Plus Status Reporter</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <h1>Plus Status</h1>
+          <p id="statusText">账号列表留空时，会直接检测当前已登录账号。</p>
+        </div>
+        <button id="readBtn" type="button">检测并下载</button>
+      </header>
+
+      <section class="settings" aria-label="导出设置">
+        <label>
+          <span>分组名</span>
+          <input id="groupNamesInput" type="text" value="codex" autocomplete="off">
+        </label>
+      </section>
+
+      <section class="batch" aria-label="批量账号">
+        <div class="section-title">
+          <strong>批量账号</strong>
+          <span id="queueStatus">0 / 0</span>
+        </div>
+        <textarea id="accountsInput" class="accounts-input" spellcheck="false" placeholder="可留空。留空时直接检测当前已登录账号。批量时每行一个邮箱，手动完成登录后检测。"></textarea>
+        <div class="actions">
+          <button id="loadQueueBtn" type="button">载入队列</button>
+          <button id="openLoginBtn" type="button" disabled>打开登录</button>
+        </div>
+      </section>
+
+      <section class="summary" aria-label="账号摘要">
+        <div>
+          <span>邮箱</span>
+          <strong id="emailValue">-</strong>
+        </div>
+        <div>
+          <span>套餐</span>
+          <strong id="planValue">-</strong>
+        </div>
+        <div>
+          <span>账号 ID</span>
+          <strong id="accountIdValue">-</strong>
+        </div>
+        <div>
+          <span>过期时间</span>
+          <strong id="expiresValue">-</strong>
+        </div>
+      </section>
+
+      <section class="output" aria-label="导出 JSON">
+        <textarea id="jsonOutput" spellcheck="false" readonly placeholder="检测成功后这里会生成不含凭据的 Plus 状态 JSON。"></textarea>
+      </section>
+
+      <footer class="actions">
+        <button id="copyBtn" type="button" disabled>复制 JSON</button>
+        <button id="downloadBtn" type="button" disabled>下载 JSON</button>
+      </footer>
+
+      <footer class="actions">
+        <button id="appendBatchBtn" type="button" disabled>加入批量结果</button>
+        <button id="downloadBatchBtn" type="button" disabled>下载批量 JSON</button>
+      </footer>
+    </main>
+    <script src="exporter.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

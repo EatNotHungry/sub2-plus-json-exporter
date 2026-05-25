@@ -1,0 +1,197 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  color: #17202a;
+  background: #f7f8fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 460px;
+  min-height: 680px;
+  margin: 0;
+  background: #f7f8fa;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+  color: #5d6b7a;
+  line-height: 1.45;
+}
+
+button {
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid #aab4c0;
+  border-radius: 6px;
+  color: #16202a;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover:not(:disabled) {
+  border-color: #2b6cb0;
+  color: #174f8a;
+}
+
+button:disabled {
+  color: #8995a3;
+  cursor: not-allowed;
+  background: #edf0f3;
+}
+
+.settings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.full-row {
+  grid-column: 1 / -1;
+}
+
+.checkbox-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox-row input {
+  width: 16px;
+  min-height: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #5d6b7a;
+  font-size: 12px;
+}
+
+input {
+  width: 100%;
+  min-height: 32px;
+  padding: 6px 8px;
+  border: 1px solid #c7d0da;
+  border-radius: 6px;
+  color: #17202a;
+  background: #fff;
+}
+
+.batch {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #5d6b7a;
+}
+
+.section-title strong {
+  color: #17202a;
+}
+
+.accounts-input {
+  height: 90px;
+  resize: vertical;
+}
+
+.code-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.summary div {
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid #d9e0e7;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.summary span {
+  display: block;
+  margin-bottom: 4px;
+  color: #5d6b7a;
+  font-size: 12px;
+}
+
+.summary strong {
+  display: block;
+  overflow: hidden;
+  color: #17202a;
+  font-size: 13px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.output {
+  min-height: 250px;
+}
+
+textarea {
+  width: 100%;
+  height: 250px;
+  resize: vertical;
+  padding: 10px;
+  border: 1px solid #c7d0da;
+  border-radius: 6px;
+  color: #17202a;
+  background: #fff;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.actions.three {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.actions.four {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
